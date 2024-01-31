@@ -3,8 +3,14 @@ import 'package:flutter/material.dart';
 class GradientContainer extends StatelessWidget {
   const GradientContainer({
     super.key,
-    this.colors = const [Colors.cyan, Colors.pink],
+    required this.colors,
   });
+
+  GradientContainer.defaultColors({super.key})
+      : colors = [
+          Colors.cyan,
+          Colors.pink,
+        ];
 
   final List<Color> colors;
 
